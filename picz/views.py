@@ -3,6 +3,6 @@ from django.http import HttpResponse
 # Create your views here.de
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the picz index.")
+def homepage(request):
+    return render(request, 'welcome.html')
 

@@ -1,0 +1,19 @@
+h1{
+    color: white;
+   margin-top: 250px;
+   font-family: Eczar;
+   text-transform: uppercase;
+   font-weight: 800;
+   font-size: 5em;
+   text-shadow: 4px 4px 4px wheat;
+}
+
+
+body{
+    background-color: black;
+}
+
+.btn{
+    margin-left: 500px;
+    outline: none;
+}
