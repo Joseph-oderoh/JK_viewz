@@ -18,6 +18,8 @@
   {% endblock %}
   </head>
   <body>
+
+    {% include "navbar.html" %}
     {% block content %}{{block.super}} {% endblock %}
 
     {% block scripts %}
