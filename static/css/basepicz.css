@@ -9,10 +9,12 @@ h1{
 }
 
 
-body{
-    background-color: black;
-}
 
 .btn{
     margin-left: 500px;
+}
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.401);
 }

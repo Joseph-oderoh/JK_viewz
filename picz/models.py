@@ -5,7 +5,7 @@ class Images(models.Model):
     '''
     model to handle images
     '''
-    image_link = models.ImageField(upload_to='images/')
+    image_link = models.ImageField(upload_to='images/',default='DEFAULT VALUE')
     title = models.CharField(max_length=80)
     description = models.TextField()
     category = models.ForeignKey('Categories', on_delete=models.CASCADE, default=1)
