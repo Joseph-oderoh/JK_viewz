@@ -14,10 +14,10 @@
             {% if results %} {% for item in results %}
             <div class="gallery-item" tabindex="0">
                 <img src="{{item.image_link.url}}" class="gallery-image" alt="">
-                <div class="gallery-item-info">
+                <div class="gallery-item-info ">
                     <ul>
-                        <li class="gallery-item-likes"> {{item.category}} </li>
-                        <li class="gallery-item-comments">{{item.location}} </li>
+                        <li class="gallery-item-likes"><span class="mdi mdi-camera-iris md-36"></span> {{item.category}} </li>
+                        <li class="gallery-item-comments"><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
                     </ul>
                 </div>
             </div>

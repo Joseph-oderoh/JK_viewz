@@ -1,39 +1,42 @@
-
   
 {% extends 'base.html' %}
 
 <!--  -->
 {% block content %} {{block.super}}
-<div class="container-fluid">
+<div class="container">
     <nav class="navbar navbar-expand-lg ">
         <div class="col-sm-4 col-md-4 navbar-left">
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-filter"></i>
+                    <span class="mdi mdi-camera-iris md-36"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for item in locations %}
-                    <a class="dropdown-item" href="/location/{{item.city}}">{{item.city}}</a> {% endfor %}
+                    <a class="dropdown-item" href="/location/{{item.city}}"><span class="mdi mdi-camera-iris md-36"></span>{{item.city}}</a> {% endfor %}
                 </div>
             </div>
         </div>
     </nav>
 </div>
-
+<h2 class="text-center">Gallery</h2>
 <div class="block">
-    <div class="row">
-
-        <div class="gallery">
+ 
+        <div class="gallery container"> 
             {% for item in pictures %}
+            <div class="row">
+                <div class="col-6">
             <div class="gallery-item" data-toggle="modal" data-target="#{{item.id}}">
-                <img src="{{item.image_link.url}}" alt="" class="gallery-image">
-                <div class="gallery-item-info">
-                    <ul>
-                        <li class="gallery-item-likes"><span class="visually-hidden"></span><i class="fa fa-tags" aria-hidden="true"></i> {{item.category}} </li>
-                        <li class="gallery-item-comments"><span class="visually-hidden"></span><i class="fa fa-thumb-tack" aria-hidden="true"></i> {{item.location}} </li>
-                    </ul>
+                <img src="{{item.image_link.url}}" alt="" class="gallery-image"  width="400">
                 </div>
+                
+                <div class="gallery-item-info ">
+                    <ul class="infoz">
+                        <li class=""><span class="mdi mdi-camera-iris md-36"></span>{{item.category}} </li>
+                        <li class=" "><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
+                    </ul>
             </div>
+            </div>
+        
 
             <div class="modal fade " id="{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -42,12 +45,12 @@
                             <button type="button" data-dismiss="modal">Close
                         </div>
                         <div class="modal-body text-center">
-                            <h4 class="modal-title" id="imageheader">{{item.title}}</h4>
-                            <img src="{{picz_item.image_link.url}}" alt="{{item.name}}" class="img-responsive" width="300" height="300">
+                            <h4 class="modal-title" id="imageheader"><strong>Title:</strong>{{item.title}}</h4>
+                            <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-responsive" width="300" height="300">
                             <p class="text-center">{{item.description}}</p>
                             <ul class="list-inline list-unstyled">
-                                <li class="list-inline-item gallery-item-likes">{{item.category}} </li>
-                                <li class="list-inline-item gallery-item-comments">{{item.location}} </li>
+                                <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Category:</strong>{{item.category}} </li>
+                                <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Locations:</strong>{{item.location}} </li>
                             </ul>
                         </div>
                     </div>
@@ -61,3 +64,6 @@
 {% endblock %} {% block scripts %} {{block.super}}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 {% endblock %}
+
+
+

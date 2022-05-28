@@ -1,3 +1,4 @@
+
 h1{
     color: white;
    margin-top: 250px;
@@ -11,10 +12,41 @@ h1{
 
 
 .btn{
-    margin-left: 500px;
+    margin: 30px auto;
+    justify-content: center;
+    
 }
 
 
 body{
     background-color: rgba(0, 0, 0, 0.401);
+    
+}
+
+.infoz{
+list-style-type: none;
+font-size: 30px;
+
+}
+
+strong{
+    font-size: 20px;
+    color: blue;
+    font-weight: 800;
+    font-family: poppins;
+}
+
+
+.row{
+    color: red;
+    
+}
+
+h2{
+    color: white;
+    font-family: Eczar;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 5em;
+    text-shadow: 4px 4px 4px wheat;
 }
