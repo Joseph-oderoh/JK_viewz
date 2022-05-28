@@ -120,7 +120,7 @@ class LocationTest(TestCase):
         test method to ensure a Location instance has been correctly updated
         '''
         update_locale = Locations.update_location('unknown', 'blackTown')
-        self.assertEqual(update_locale.city, 'paperTown')
+        self.assertEqual(update_locale.city, 'blackTown')
 
     def test_get_all(self):
         '''
@@ -129,10 +129,10 @@ class LocationTest(TestCase):
         locations = Locations.get_all()
         print(locations)
         
-    class CategoryTest(TestCase):
-        '''
-        test class for Categories model
-        '''
+class CategoryTest(TestCase):
+    '''
+    test class for Categories model
+    '''
     def setUp(self):
         '''
         test method to create Category instances called before all tests
