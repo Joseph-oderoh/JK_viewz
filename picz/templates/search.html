@@ -2,9 +2,9 @@
 <div class="block">
     <div class="row">
         {% if results %}
-        <h2> Found {{results|length }} items for the term '{{message}}' </h2>
+        <h3 class="text-info"> Found {{results|length }} items for the term '{{message}}' </h3>
         {% else %}
-        <h2> Found 0 results in '{{message}}' </h2>
+        <h3 class="text-info"> Found 0 results in '{{message}}' </h3>
         {% endif %}
     </div>
 
@@ -16,8 +16,8 @@
                 <img src="{{item.image_link.url}}" class="gallery-image" alt="">
                 <div class="gallery-item-info ">
                     <ul>
-                        <li class="gallery-item-likes"><span class="mdi mdi-camera-iris md-36"></span> {{item.category}} </li>
-                        <li class="gallery-item-comments"><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
+                        <li ><span class="mdi mdi-camera-iris md-36"></span> {{item.category}} </li>
+                        <li ><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
                     </ul>
                 </div>
             </div>

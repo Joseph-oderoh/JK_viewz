@@ -19,28 +19,26 @@ h1{
 
 
 body{
-    background-color: rgba(0, 0, 0, 0.401);
-    
+background-color: black;
 }
 
 .infoz{
 list-style-type: none;
-font-size: 30px;
-
+font-size: 15px;
+color: red;
+position: absolute;
+top: 500px;
 }
 
 strong{
     font-size: 20px;
     color: blue;
     font-weight: 800;
-    font-family: poppins;
+    font-family: poppins;  
 }
 
 
-.row{
-    color: red;
-    
-}
+
 
 h2{
     color: white;
@@ -50,3 +48,16 @@ h2{
     font-size: 5em;
     text-shadow: 4px 4px 4px wheat;
 }
+
+.rowz{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.557);
+    padding: 10px;
+    border-radius: 45px;
+  
+}
+
+

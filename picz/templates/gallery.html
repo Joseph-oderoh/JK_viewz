@@ -19,23 +19,20 @@
     </nav>
 </div>
 <h2 class="text-center">Gallery</h2>
-<div class="block">
  
-        <div class="gallery container"> 
-            {% for item in pictures %}
-            <div class="row">
-                <div class="col-6">
+        <div class=" container imgz"> 
+
+    <div class="row rowz ">
+            {% for item in pictures %}    
             <div class="gallery-item" data-toggle="modal" data-target="#{{item.id}}">
-                <img src="{{item.image_link.url}}" alt="" class="gallery-image"  width="400">
-                </div>
-                
+                <img src="{{item.image_link.url}}" alt="" class="gallery-image"  width="500">
                 <div class="gallery-item-info ">
                     <ul class="infoz">
-                        <li class=""><span class="mdi mdi-camera-iris md-36"></span>{{item.category}} </li>
-                        <li class=" "><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
+                        <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Category:</strong>{{item.category}} </li>
+                        <li class=" "><span class="mdi mdi-camera-iris md-36"></span><strong>Locations:</strong>{{item.location}} </li>
                     </ul>
             </div>
-            </div>
+        </div>
         
 
             <div class="modal fade " id="{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -60,10 +57,11 @@
             {% endfor %}
         </div>
     </div>
-</div>
+
 {% endblock %} {% block scripts %} {{block.super}}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 {% endblock %}
+
 
 
 
