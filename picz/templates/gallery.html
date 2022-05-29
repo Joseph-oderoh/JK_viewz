@@ -48,12 +48,25 @@
                             <ul class="list-inline list-unstyled">
                                 <li class=""><strong>Category:</strong>{{item.category}} </li>
                                 <li class=""><strong>Locations:</strong>{{item.location}} </li>
+                                
                             </ul>
                         </div>
+                        <button type="button" name="button" class="btn btn-info" value="https://jkviewz.herokuapp.com{{item.image_link.url}}" onclick="copylink(this.value)">Copy Image Link</button>
                     </div>
                 </div>
             </div>
-
+            <script>
+                function copylink(value) {
+                    console.log('hi yellow')
+                    function handler(event){
+                        event.clipboardData.setData('text/plain', value);
+                        event.preventDefault();
+                        document.removeEventListener('copy', handler, true);
+                    }
+                    document.addEventListener('copy', handler, true);
+                    document.execCommand('copy');
+                }
+                </script>
             {% endfor %}
         </div>
     </div>
