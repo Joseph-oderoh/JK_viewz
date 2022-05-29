@@ -5,7 +5,7 @@ h1{
    font-family: Eczar;
    text-transform: uppercase;
    font-weight: 800;
-   font-size: 5em;
+   font-size: 10em;
    text-shadow: 4px 4px 4px wheat;
 }
 
@@ -72,4 +72,10 @@ h2{
   
 }
 
+
+.logo{
+    font-size: 3em;
+    font-family: Eczar;
+    text-transform: uppercase;
+}
 
