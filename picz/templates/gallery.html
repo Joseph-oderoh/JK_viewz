@@ -25,7 +25,7 @@
     <div class="row rowz ">
             {% for item in pictures %}    
             <div class="gallery-item" data-toggle="modal" data-target="#{{item.id}}">
-                <img src="{{item.image_link.url}}" alt="" class="gallery-image"  width="500">
+                <img src="{{item.image_link.url}}" alt="" class="gallery-image picha"  height="500">
                 <div class="gallery-item-info ">
                     <ul class="infoz">
                         <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Category:</strong>{{item.category}} </li>
@@ -43,11 +43,11 @@
                         </div>
                         <div class="modal-body text-center">
                             <h4 class="modal-title" id="imageheader"><strong>Title:</strong>{{item.title}}</h4>
-                            <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-responsive" width="300" height="300">
-                            <p class="text-center">{{item.description}}</p>
+                            <img src="{{item.image_link.url}}" alt="{{item.name}}" class="img-responsive" height="500">
+                            <p class="text-center"><strong>Description:</strong>{{item.description}}</p>
                             <ul class="list-inline list-unstyled">
-                                <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Category:</strong>{{item.category}} </li>
-                                <li class=""><span class="mdi mdi-camera-iris md-36"></span><strong>Locations:</strong>{{item.location}} </li>
+                                <li class=""><strong>Category:</strong>{{item.category}} </li>
+                                <li class=""><strong>Locations:</strong>{{item.location}} </li>
                             </ul>
                         </div>
                     </div>

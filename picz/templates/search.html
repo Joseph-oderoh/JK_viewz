@@ -2,6 +2,7 @@
 <div class="block">
     <div class="row">
         {% if results %}
+        <h2class="text-center">Category</h2class=>
         <h3 class="text-info"> Found {{results|length }} items for the term '{{message}}' </h3>
         {% else %}
         <h3 class="text-info"> Found 0 results in '{{message}}' </h3>
@@ -9,16 +10,19 @@
     </div>
 
 
-    <div class="row">
+    <div class="row rowz1">
         <div class="gallery">
             {% if results %} {% for item in results %}
             <div class="gallery-item" tabindex="0">
-                <img src="{{item.image_link.url}}" class="gallery-image" alt="">
-                <div class="gallery-item-info ">
-                    <ul>
-                        <li ><span class="mdi mdi-camera-iris md-36"></span> {{item.category}} </li>
-                        <li ><span class="mdi mdi-camera-iris md-36"></span>{{item.location}} </li>
+            <div class="col-6">
+                <img src="{{item.image_link.url}}" class="gallery-image" alt=""  width="500">
+            </div>
+                <div class="gallery-item-info col-6">
+                    <ul class="infoz">
+                        <li ><strong>Category:</strong> {{item.category}} </li>
+                        <li ><strong>Locations:</strong>{{item.location}} </li>
                     </ul>
+                    <p class="text-center"><strong>Description:</strong>{{item.description}}</p>
                 </div>
             </div>
             {% endfor %} {% endif %}
