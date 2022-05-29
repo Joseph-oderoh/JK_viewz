@@ -18,10 +18,10 @@ class ImagesTest(TestCase):
         self.new_location.save_location()
         
         
-        self.new_picture = Images(image_link='images/picture.jpeg')
+        self.new_picture = Images(image_link='images/picture.jpeg', title='Image title', description='doing something  random', category=self.new_category, location=self.new_location)
         self.new_picture.save_image()
         
-        self.another_picture = Images(image_link='images/photo.jpg')
+        self.another_picture = Images(image_link='images/photo.jpg', title='Another title', description=' random', category=self.new_category, location=self.new_location)
         self.another_picture.save_image()
         
     def tearDown(self):
